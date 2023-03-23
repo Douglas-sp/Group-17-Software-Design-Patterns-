@@ -63,3 +63,44 @@ class ProductCatalogSingleton:
             return self.products
 
 # Unit tests for the Factory Method pattern and Singleton
+
+
+def test_factory_method():
+    factory = ProductFactory()
+
+    # Create an electronics product
+    electronics_product = factory.create_product(
+        "electronics", "Smartphone", 500.0, 10, "A high-end smartphone")
+    assert electronics_product.category == "Electronics"
+    assert electronics_product.price == 500.0
+
+    # Create a clothing product
+    clothing_product = factory.create_product(
+        "clothing", "T-Shirt", 20.0, 50, "A basic cotton t-shirt")
+    assert clothing_product.category == "Clothing"
+    assert clothing_product.quantity == 50
+
+    # Create a groceries product
+    groceries_product = factory.create_product(
+        "groceries", "Bananas", 2.0, 100, "A bunch of ripe bananas")
+    assert groceries_product.category == "Groceries"
+    assert groceries_product.description == "A bunch of ripe bananas"
+
+
+def test_singleton():
+    catalog1 = ProductCatalogSingleton.get_instance()
+    catalog2 = ProductCatalogSingleton.get_instance()
+
+    # Make sure there is only one instance of the product catalog
+    assert catalog1 is catalog2
+
+    # Add a product to the catalog
+    product = Product("Headphones", 50.0, 20, "Electronics",
+                      "A pair of noise-cancelling headphones")
+    catalog1.add_product(product)
+
+    # Make sure the product is in the catalog
+    products = catalog2.get_products("Electronics")
+    assert len(products) == 1
+    assert products[0].name == "Headphones"
+    assert products[0].price == 50.0
