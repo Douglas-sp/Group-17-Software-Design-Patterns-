@@ -1,18 +1,22 @@
 class Product:
-    def __init__(self, name, price, brand):
+    def __init__(self, name, price, quantity, category, description):
         self.name = name
         self.price = price
-        self.brand = brand
+        self.quantity = quantity
+        self.category = category
+        self.description = description
 
-    
-    def get_price(self):
-        return self.price
-    
     def get_name(self):
         return self.name
-        
-    def get_name(self):
-        return self.brand    
 
-def get_category(self):
-        pass
+    def get_price(self):
+        return self.price
+
+    def get_quantity(self):
+        return self.quantity
+
+    def get_category(self):
+        return self.category
+
+    def get_description(self):
+        return self.description
