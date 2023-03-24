@@ -1,4 +1,5 @@
 from ProductCatalog import ProductCatalog
+from Product import Product
 from ProductFactory import ProductFactory
 # Creating instances of specific products
 product_factory = ProductFactory()
@@ -17,4 +18,4 @@ product_catalog.add_product(product_3)
 products = product_catalog.get_products()
 
 for product in products:
-    print(product.get_name(), product.get_price())
+    print(product.get_name(), product.get_price(), product.get_quantity(), product.get_category, product.get_description())
