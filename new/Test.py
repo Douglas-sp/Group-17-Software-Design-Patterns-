@@ -3,11 +3,9 @@ from ProductFactory import ProductFactory
 # Creating instances of specific products
 product_factory = ProductFactory()
 
-# name, price, quantity, category, description
-
-product_1 = product_factory.create_electronic_product("Laptop", 1000, "12", )
-product_2 = product_factory.create_clothing_product("T-Shirt", 20, "M")
-product_3 = product_factory.create_grocery_product("Milk", 2, "2023-04-01")
+product_1 = product_factory.create_electronic_product("Smartphone", 920000, 100, "Electronics", "A high-end smartphone with the latest features.")
+product_2 = product_factory.create_clothing_product("T-Shirt", 34000, 50, "Clothing", "A comfortable and stylish t-shirt.")
+product_3 = product_factory.create_grocery_product("Milk", 25000, 20, "Groceries", "A carton of fresh milk.")
 
 # Adding products to the catalog
 product_catalog = ProductCatalog()
