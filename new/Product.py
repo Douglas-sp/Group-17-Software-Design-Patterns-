@@ -1,8 +1,8 @@
 class Product:
-    def __init__(self, name, price, brand):
+    def __init__(self, name, price, more_info):
         self.name = name
         self.price = price
-        self.brand = brand
+        self.more_info = more_info
 
     
     def get_price(self):
@@ -12,7 +12,4 @@ class Product:
         return self.name
         
     def get_name(self):
-        return self.brand    
-
-def get_category(self):
-        pass
+        return self.more_info   
