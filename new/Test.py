@@ -18,4 +18,11 @@ product_catalog.add_product(product_3)
 products = product_catalog.get_products()
 
 for product in products:
-    print(product.get_name(), product.get_price(), product.get_quantity(), product.get_category, product.get_description())
+    #print(product.get_name(), product.get_price(), product.get_quantity(), product.get_category, product.get_description())
+    print(product.get_name())
+    print(product.get_price())
+    print(product.get_quantity())
+    print(product.get_category)
+    print(product.get_description())
+    print("--------------------------------------")
+
