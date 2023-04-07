@@ -1,0 +1,15 @@
+from abc import ABC
+
+class Subject(ABC):
+    def __init__(self):
+        self.observers = []
+
+    def register_observer(self, observer):
+        self.observers.append(observer)
+
+    def remove_observer(self, observer):
+        self.observers.remove(observer)
+
+    def notify_observers(self, barcode):
+        for observer in self.observers:
+            observer.update(barcode)
